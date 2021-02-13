@@ -1,8 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-Library/* linguist-vendored
-Packages/* linguist-vendored
-*.meta -linguist-detectable
-*.shader -linguist-detectable
-*.cgis -linguist-detectable
+Assets/TextMeshPro linguist-vendored
