@@ -4,3 +4,5 @@
 Library/* linguist-vendored
 Packages/* linguist-vendored
 *.meta -linguist-detectable
+*.shader -linguist-detectable
+*.cgis -linguist-detectable
