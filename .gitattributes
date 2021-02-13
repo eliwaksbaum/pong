@@ -1,4 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-Assets/TextMeshPro linguist-vendored
+Assets/TextMeshPro/* linguist-vendored
