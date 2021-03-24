@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
 
     void Serve()
     {
-        float yComp = Random.Range(-0.8f, 0.8f);
+        float yComp = 0;//Random.Range(-0.8f, 0.8f);
         Vector2 dir = new Vector2(serve, yComp);
         Vector2 force = dir.normalized * speed;
         rigidbody.AddForce(force);
@@ -50,8 +50,15 @@ public class Ball : MonoBehaviour
         }
     }
 
-    public void AddForce(Vector2 force)
+    // public void AddForce(Vector2 force)
+    // {
+    //     rigidbody.AddForce(force);
+    // }
+
+    public void AdjustBounce()
     {
-        rigidbody.AddForce(force);
+        float adjustment = Random.Range(-1.4f, 1.4f);
+        float vY = rigidbody.velocity.y;
+        rigidbody.velocity = new Vector2(rigidbody.velocity.x, vY + adjustment);
     }
 }

@@ -6,7 +6,7 @@ using TMPro;
 public class Paddle : MonoBehaviour
 {
     public float paddleSpeed = 0.3f;
-    public float bounce = 20;
+    //public float bounce = 20;
     public string axis;
     public TextMeshPro scoreText;
 
@@ -67,9 +67,11 @@ public class Paddle : MonoBehaviour
         Ball ball = collision.gameObject.GetComponent<Ball>();
         if (ball != null)
         {
-            float yComp = bounce * UnityEngine.Random.Range(-.8f, .8f);
-            Vector2 force = new Vector2(0, yComp);
-            ball.AddForce(force);
+            // float yComp = bounce * UnityEngine.Random.Range(-.8f, .8f);
+            // Vector2 force = new Vector2(0, yComp);
+            // ball.AddForce(force);
+
+            ball.AdjustBounce();
         }
     }
 
